@@ -17,7 +17,7 @@ public class LabmdaExpressionFundamental {
 
     //using Lambda
     Dog.Dogqueries dq1 = d -> d.getAge() > 9;
-    
+
 
     System.out.println("Clover " + dq1.test(clover));
 
