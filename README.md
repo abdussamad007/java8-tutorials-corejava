@@ -5,8 +5,9 @@ Java8 Lambda Expression tutorials
 
 ### Functional Interface:
     One of the important concept to learn functional interface.
-        * Interface with one abstract method is called functional interface.Later, you use an inner class
+        * Interface with ONLY one abstract method is called functional interface.Later, you use an inner class
         to define an instance of the class that implements this interface.
+        * it could have other methos like default and static
         
         Example: 
         ```
@@ -15,7 +16,7 @@ Java8 Lambda Expression tutorials
             public boolean test(Dog g);
         } 
         
-        //Now implement this functional Interface.
+        //Now implement this functional Interface in a classic way. 
         DogQueries dq = new DogQueries() {
             public boolean test(Dog g){
                 return d.getAge() >9;
@@ -26,7 +27,7 @@ Java8 Lambda Expression tutorials
         // Same implementation in Lambda expression
         DogQueries dq = (d) -> d.getAge() > 9;
         
-        // Check if Doggy is a older ?
+        // Check if Doggy is older ?
         
         System.out.println("Is the Dog name Doggy is older than 9? " + dq.test(doggyInstance));
         
